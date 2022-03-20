@@ -8,10 +8,20 @@
 
 require 'csv'
 
-CSV.foreach(Rails.root.join('lib/seed_csv/licenses.csv'), headers: true) do |row|
-  Word.create( {
-    package_name: row["package_name"], 
-    # version: row["version"],
-    license: row["license"] 
-  } ) 
-end
+# CSV.foreach(Rails.root.join('db/licenses.csv'), headers: true) do |row|
+#   Package.create( {
+#       package_name: row["package_name"], 
+#       # version: row["version"],
+#       license: row["license"] 
+#   } ) 
+# end
+
+CSV.foreach(Rails.root.join('db/vulnerabilities.csv'), headers: true) do |row|
+    Vulnerability.create( {
+        vulnerability_id: row["vulnerability_id"], 
+        package_name: row["package_name"],
+        package_version: row["package_version"],
+        description: row["description"],
+        created: row["created"]
+    } ) 
+  end

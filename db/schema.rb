@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_03_20_151626) do
   end
 
   create_table "vulnerabilities", force: :cascade do |t|
-    t.integer "vulnerabilty_id"
+    t.integer "vulnerability_id"
     t.string "package_name"
     t.string "package_version"
     t.string "description"
