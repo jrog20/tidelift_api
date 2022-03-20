@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+CSV.foreach(Rails.root.join('lib/seed_csv/licenses.csv'), headers: true) do |row|
+  Word.create( {
+    package_name: row["package_name"], 
+    # version: row["version"],
+    license: row["license"] 
+  } ) 
+end

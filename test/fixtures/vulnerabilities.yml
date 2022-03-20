@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vulnerabilty_id: 1
+  package_name: MyString
+  package_version: MyString
+  description: MyString
+  created: MyString
+  package: one
+
+two:
+  vulnerabilty_id: 1
+  package_name: MyString
+  package_version: MyString
+  description: MyString
+  created: MyString
+  package: two
